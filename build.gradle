@@ -16,11 +16,16 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
     runtime 'com.h2database:h2:1.4.196'
+
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation 'io.rest-assured:rest-assured:4.1.2'
+    testImplementation 'io.rest-assured:json-path:4.2.0'
+    testImplementation 'io.rest-assured:xml-path:4.2.0'
 }
 
 test {

@@ -1,38 +1,25 @@
 plugins {
-    id 'org.springframework.boot' version '2.5.0'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
+  id 'java'
+  id 'org.springframework.boot' version '3.2.3'
+  id 'io.spring.dependency-management' version '1.1.4'
 }
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(15))
-    }
-}
-
-group = 'com.larseckart'
+group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
+java {
+  sourceCompatibility = '21'
+}
+
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-//    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-    runtimeOnly 'com.h2database:h2:1.4.196'
-    implementation 'io.honeycomb.beeline:beeline-spring-boot-starter:1.5.0'
-
-    testImplementation('org.springframework.boot:spring-boot-starter-test') {
-        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-    }
-//    testImplementation 'org.springframework.security:spring-security-test'
-    testImplementation 'io.rest-assured:rest-assured:4.1.2'
-    testImplementation 'io.rest-assured:json-path:4.1.2'
-    testImplementation 'io.rest-assured:xml-path:4.1.2'
+  implementation 'org.springframework.boot:spring-boot-starter'
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-test {
-    useJUnitPlatform()
+tasks.named('test') {
+  useJUnitPlatform()
 }

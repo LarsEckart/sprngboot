@@ -24,12 +24,4 @@ public class MyController {
     return "Hello World! " + name;
   }
 
-  @Autowired MyDao myDao;
-
-  @RequestMapping("/dao")
-  @ResponseBody
-  String dao() {
-    myDao.run();
-    return "Hello World!";
-  }
 }

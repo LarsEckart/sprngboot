@@ -1,1 +1,1 @@
-web: java -javaagent:newrelic.jar -Dserver.port=$PORT -jar build/libs/sprng-0.0.1-SNAPSHOT.jar
+web: java $JAVA_OPTS -javaagent:honeycomb-opentelemetry-javaagent-1.5.2.jar -jar app.jar

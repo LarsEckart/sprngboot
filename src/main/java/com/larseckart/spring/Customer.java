@@ -1,4 +1,4 @@
-package com.larseckart.sprng;
+package com.larseckart.spring;
 
 public class Customer {
   private final long id;

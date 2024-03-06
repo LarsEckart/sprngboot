@@ -28,5 +28,13 @@ public class MyController {
     repository.save(new Event("Hello World!", LocalDateTime.now()));
     return "Hello World! " + name;
   }
+  @RequestMapping("/delete")
+  @ResponseBody
+  String delete() {
+    repository.deleteAllByCreatedTimeBefore(LocalDateTime.now());
+    return "Hello World! " + name;
+  }
+
+
 
 }

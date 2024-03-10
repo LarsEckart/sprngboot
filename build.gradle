@@ -30,7 +30,7 @@ dependencies {
 
   implementation 'io.honeycomb.beeline:beeline-spring-boot-starter:2.1.1'
 
-
+  testImplementation 'net.ttddyy:datasource-proxy:1.10'
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
   testImplementation("org.springframework.boot:spring-boot-testcontainers")
   testImplementation("org.testcontainers:junit-jupiter")
